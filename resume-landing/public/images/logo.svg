@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128.10583mm"
+   height="128.10583mm"
+   viewBox="0 0 128.10583 128.10583"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-24.438044,-38.768538)">
+    <g
+       id="g4073">
+      <circle
+         style="fill:#ff7b00;fill-opacity:1;stroke:#fa0000;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round"
+         id="path234"
+         cx="88.490959"
+         cy="102.82146"
+         r="64" />
+      <text
+         xml:space="preserve"
+         style="font-size:70.5556px;font-family:Arial;-inkscape-font-specification:Arial;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round"
+         x="33.576099"
+         y="128.07402"
+         id="text3808"><tspan
+           sodipodi:role="line"
+           id="tspan3806"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:70.5556px;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.105833"
+           x="33.576099"
+           y="128.07402">DM</tspan></text>
+    </g>
+  </g>
+</svg>

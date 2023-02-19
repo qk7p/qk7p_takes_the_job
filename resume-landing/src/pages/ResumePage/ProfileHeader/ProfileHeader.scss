@@ -1,0 +1,117 @@
+@import "../../../styles/index";
+
+.ProfileHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px;
+  min-height: 200px;
+  height: 100%;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tabs) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 1fr 0.4fr;
+    grid-template-areas:
+      "A B C"
+      "A B D";
+    gap: 15px;
+
+    &PhotoContainer {
+      grid-area: A;
+      align-self: center;
+    }
+    &InfoContainer {
+      align-self: start;
+      padding: 20px;
+      grid-area: B;
+    }
+    .ProfileContacts {
+      grid-area: C;
+    }
+    &IconBar {
+      grid-area: D;
+    }
+  }
+
+  @media screen and (min-width: $nets) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 0px 0px;
+    grid-template-areas:
+      "A B D"
+      "C C C";
+    &PhotoContainer {
+      grid-area: A;
+    }
+    &InfoContainer {
+      grid-area: B;
+      justify-self: start;
+    }
+    .ProfileContacts {
+      grid-area: C;
+      width: 100%;
+    }
+    &IconBar {
+      grid-area: D;
+    }
+  }
+
+  .ProfilePhoto {
+    width: 130px;
+    border-radius: 50%;
+    margin: 8px;
+  }
+
+  h1 {
+    color: $color-text-secondary;
+    font-size: 40px;
+    margin-top: -1.1rem;
+  }
+
+  h2 {
+    color: $color-text-primary;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  p {
+    color: $color-text-primary;
+  }
+
+  .ProfileContacts {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, 1fr);
+
+    a {
+      text-decoration: none;
+      color: $color-text-primary;
+
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+    }
+
+    @media screen and (min-width: $nets) {
+      border-top: 1px solid $color-text-primary;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+    }
+
+    .ProfileItemTitle {
+      color: $color-text-primary-accent;
+      @include roboto-14-bold;
+      margin-top: 8px;
+    }
+  }
+
+  &IconBar {
+    width: 100%;
+  }
+}

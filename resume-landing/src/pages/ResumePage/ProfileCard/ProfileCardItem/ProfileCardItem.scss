@@ -1,0 +1,19 @@
+@import "../../../../styles/index";
+
+.ProfileCardItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+  svg {
+    height: 35px;
+  }
+  p {
+    @include roboto-16-regular;
+    color: $color-text-primary;
+  }
+  #ProfileCardItemSubInfo {
+    @include roboto-14-regular;
+    color: $color-text-secondary-accent;
+  }
+}

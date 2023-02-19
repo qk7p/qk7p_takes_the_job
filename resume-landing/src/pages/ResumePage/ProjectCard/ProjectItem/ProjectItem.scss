@@ -1,0 +1,36 @@
+@import "../../../../styles/index";
+
+.ProjectItem {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  img {
+    width: 300px;
+    height: 150px;
+    object-fit: cover;
+    max-height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    align-self: center;
+    @media screen and (min-width: $tabs) {
+width: 100%;
+    }
+  }
+  h3 {
+    color: $color-text-primary-accent;
+    margin-top: 8px;
+  }
+
+  a,
+  a:hover,
+  a:active {
+    color: $color-text-secondary-accent;
+  }
+
+  p {
+    color: $color-text-primary;
+  }
+}

@@ -1,0 +1,11 @@
+resume-landing/node_modules
+resume-landing/dist
+resume-landing/package-lock.json
+
+server/node_modules
+server/dist
+server/package-lock.json
+
+wav-compressor/node_modules
+wav-compressor/dist
+wav-compressor/package-lock.json

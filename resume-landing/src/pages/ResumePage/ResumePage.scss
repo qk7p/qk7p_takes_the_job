@@ -1,0 +1,31 @@
+@import "../../styles/index";
+
+.ResumePage {
+  @media screen and (min-width: $nets) {
+    max-width: 800px;
+    margin: auto;
+    :nth-child(odd) {
+      .ProfileCardHeader {
+        background-color: white;
+      }
+    }
+  }
+
+  .ProfileCardItemImgIcon {
+    img {
+      height: 35px;
+    }
+  }
+  &RecommendCard {
+    .ProfileCardContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (min-width: $tabs) {
+        flex-direction: row;
+      }
+    }
+  }
+}

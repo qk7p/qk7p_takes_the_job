@@ -1,0 +1,58 @@
+@import "../../styles/index";
+
+.Carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+
+  &ArrowLeft {
+    position: absolute;
+    top: 41%;
+    left: 10px;
+    z-index: 2;
+    svg {
+      height: 20px;
+      fill: $color-text-primary;
+    }
+  }
+  &ArrowRight {
+    position: absolute;
+    top: 41%;
+    right: 10px;
+    z-index: 2;
+    svg {
+      transform: rotate(180deg);
+      fill: $color-text-primary;
+      height: 20px;
+    }
+  }
+
+  .right-enter {
+    transform: translateX(-400px);
+    opacity: 0;
+  }
+  .right-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .left-enter {
+    transform: translateX(400px);
+    opacity: 0;
+  }
+  .left-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  &DataContainer {
+    width: 80%;
+  }
+}

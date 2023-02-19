@@ -1,0 +1,53 @@
+@import "../../../../styles/index";
+
+.RecommendItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+
+  
+
+  p {
+    margin: 2px;
+  }
+
+  .Button {
+    background-color: $color-text-primary-accent;
+    border: none;
+    width: 150px;
+    height: 24px;
+    padding: 2px;
+    @include roboto-12-bold;
+    color: #fff;
+  }
+
+  a,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: $color-text-secondary;
+    @include roboto-14-bold;
+  }
+
+  &PhoneContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    align-items: center;
+
+    label {
+      margin-right: 4px;
+      color: $color-text-primary-accent;
+    }
+  }
+
+  &Name {
+    color: $color-text-primary-accent;
+    @include roboto-16-bold;
+  }
+
+  &Position {
+    color: $color-text-primary;
+  }
+}
