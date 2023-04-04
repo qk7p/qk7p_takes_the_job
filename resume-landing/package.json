@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "scp -r E:/Projects/qk7p_takes_the_job/resume-landing/dist/* qk7p@192.168.0.106:/var/www/qk7p.ru/html"
+    "deploy": "scp -r C:/Users/qk7p/YandexDisk/Projects/qk7p_takes_the_job/resume-landing/dist/* qk7p@192.168.0.106:/var/www/qk7p.ru/html"
   },
   "dependencies": {
     "@types/react-transition-group": "^4.4.5",

@@ -1,0 +1,36 @@
+@import "@styles/index";
+
+.loginPage {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: $color-login-page-background;
+}
+
+.title {
+  @include text-20-medium;
+  color: $color-text-primary;
+
+  margin: $ui-step * 2;
+  margin-top: $ui-step * 20;
+}
+
+.loginForm {
+  flex-grow: 1;
+
+  margin-top: $ui-step * 10;
+}
+
+.link {
+  align-self: flex-end;
+  justify-self: flex-end;
+
+  margin: $ui-step * 4;
+
+  color: $color-text-link;
+}

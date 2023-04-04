@@ -9,15 +9,6 @@
   height: 50px;
   background-color: $background-secondary;
   box-shadow: $shadow-primary;
-  z-index: 2;
-  .Button {
-    height: 50px;
-    width: 60%;
-  }
-
-  @media screen and (min-width: $tabs) {
-    height: 90px;
-  }
 
   .HeaderLogo {
     svg {

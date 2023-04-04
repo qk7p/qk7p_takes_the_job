@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "scp -r E:/Projects/wav-compressor/dist/* qk7p@192.168.0.106:/var/www/wav-compressor/html"
+    "deploy": "scp -r C:/Users/qk7p/YandexDisk/Projects/qk7p_takes_the_job/wav-compressor/dist/* qk7p@192.168.0.106:/var/www/wav-compressor/html"
   },
   "dependencies": {
     "@types/react-router-dom": "^5.3.3",

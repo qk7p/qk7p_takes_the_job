@@ -1,0 +1,35 @@
+@import "@styles/index";
+
+.registrationForm {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: $ui-step * 2;
+}
+
+.button {
+  min-width: 100px;
+
+  margin-top: $ui-step * 5;
+}
+
+.error {
+  color: $color-text-error;
+}
+
+.loading {
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}

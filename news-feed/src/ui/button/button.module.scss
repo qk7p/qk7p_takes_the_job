@@ -1,0 +1,23 @@
+@import "@styles/index";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: calc($ui-step * 2) calc($ui-step * 4);
+  border-radius: $ui-border-radius-mobile;
+  border: none;
+  outline: transparent;
+  margin: $ui-step;
+  cursor: pointer;
+  background-color: $color-button-backgorund;
+  color: $color-button-text;
+}
+.button:hover {
+  background-color: $color-button-backgorund-hover;
+}
+
+.button:focus {
+  outline: 1px solid black;
+}

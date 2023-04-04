@@ -1,0 +1,12 @@
+.newsPage {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 8fr;
+  grid-template-columns: 7fr 3fr;
+  grid-template-areas:
+    "News Profile"
+    "News Sources";
+  gap: 20px;
+  padding: 20px 0;
+}

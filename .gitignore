@@ -9,3 +9,7 @@ server/package-lock.json
 wav-compressor/node_modules
 wav-compressor/dist
 wav-compressor/package-lock.json
+
+news-feed/node_modules
+news-feed/dist
+news-feed/package-lock.json

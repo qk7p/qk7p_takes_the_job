@@ -1,0 +1,63 @@
+@import "@styles/index";
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include text-14-regular;
+
+  position: relative;
+
+  margin-top: $ui-step * 2;
+}
+
+.error {
+  @include text-12-regular;
+
+  margin-left: $ui-step * 3;
+
+  color: $color-text-error;
+}
+
+.label {
+  position: absolute;
+
+  background-color: transparent;
+  color: $color-label-login;
+
+  top: 18px;
+  left: 20px;
+
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.focused {
+  .label {
+    top: 1px;
+
+    background-color: white;
+
+    @include text-12-regular;
+  }
+}
+
+/* fix autofill */
+
+.input:-webkit-autofill {
+  -webkit-background-clip: text;
+}
+
+.input {
+  &:-webkit-autofill {
+    border: 1px solid rgba(0, 0, 0, 0.54);
+    & ~ .label {
+      top: -7px;
+      padding: 0 5px;
+      color: $color-text-primary;
+      background-color: $color-login-page-background;
+    }
+  }
+}
