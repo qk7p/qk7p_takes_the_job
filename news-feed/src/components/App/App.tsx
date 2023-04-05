@@ -8,6 +8,8 @@ import { Route, Routes } from "react-router-dom";
 import styles from "./app.module.scss";
 import RegistrationPage from "@/pages/registration-page/RegistrationPage";
 import RegistrationSuccess from "@/pages/registration-page/registration-success/RegistrationSuccess";
+import Profile from "../profile/Profile";
+import Sources from "../sources/Sources";
 
 const App: FC = () => {
   return (

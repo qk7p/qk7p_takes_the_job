@@ -25,6 +25,7 @@
     "uuidv4": "^6.2.13",
     "vite-plugin-svgr": "^2.4.0",
     "vite-tsconfig-paths": "^4.0.7",
+    "vk-openapi": "^0.1.2",
     "yup": "^1.0.2"
   },
   "devDependencies": {

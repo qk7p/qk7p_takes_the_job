@@ -9,6 +9,8 @@ import { useNavigate } from "react-router-dom";
 import Loading from "../loading/Loading";
 import styles from "./login-form.module.scss";
 import classNames from "classnames";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 type LoginInputs = {
   email: string;
@@ -19,12 +21,17 @@ export interface ILoginFormProps {
   className?: string;
 }
 
+const schema = yup.object().shape({
+  email: yup.string().required("Введите почту"),
+  password: yup.string().required("Введите пароль"),
+});
+
 const LoginForm: FC<ILoginFormProps> = ({ className }) => {
   const {
     register,
     handleSubmit,
     formState: { errors, dirtyFields },
-  } = useForm<LoginInputs>();
+  } = useForm<LoginInputs>({ resolver: yupResolver(schema) });
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -52,7 +59,6 @@ const LoginForm: FC<ILoginFormProps> = ({ className }) => {
         }
       })
       .catch((error) => {
-        console.log(error);
         if (error.code === "ERR_NETWORK") {
           setSubmitError("Нет соединения");
           setIsLoading(false);
