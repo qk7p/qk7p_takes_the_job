@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { IconType } from "../icon/IconType";
 import styles from "./tab.module.scss";
 import classNames from "classnames";
@@ -21,6 +21,7 @@ const Tab: FC<ITabProps> = ({ items, className }) => {
   const [activeElement, setActiveElement] = useState<React.ReactNode>(
     items[0].element
   );
+
 
   const [data, setData] = useState(items);
 
