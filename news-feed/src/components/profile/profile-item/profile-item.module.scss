@@ -1,0 +1,41 @@
+@import "@styles/index";
+
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-top: $ui-step;
+}
+
+.label {
+  @include text-18-regular;
+
+  color: $color-text-primary;
+}
+
+.value {
+  margin-left: $ui-step;
+
+  color: $color-text-secondary;
+
+  @include text-18-regular;
+}
+
+.input {
+  height: 24px;
+}
+
+.icon {
+  width: max-content;
+
+  margin-left: auto;
+  margin-right: $ui-step * 2;
+
+  svg {
+    width: 16px;
+  }
+}

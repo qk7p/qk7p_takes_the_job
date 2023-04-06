@@ -28,8 +28,8 @@
   color: $color-button-text;
 
   align-self: center;
-  justify-self: flex-end;
-
+  margin-top: auto;
+  
   &:hover {
     background-color: $color-button-backgorund-hover;
   }

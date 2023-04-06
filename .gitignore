@@ -5,6 +5,7 @@ resume-landing/package-lock.json
 server/node_modules
 server/dist
 server/package-lock.json
+server/constants
 
 wav-compressor/node_modules
 wav-compressor/dist
@@ -13,3 +14,4 @@ wav-compressor/package-lock.json
 news-feed/node_modules
 news-feed/dist
 news-feed/package-lock.json
+news-feed/src/api/vkApi.ts

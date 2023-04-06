@@ -5,6 +5,8 @@ export interface User {
   email: string;
   accessToken: string;
   refreshToken: string;
+  nickname: string;
+  name: string;
   isAuth: boolean;
 }
 
@@ -16,6 +18,8 @@ const initUser: User = {
   email: "",
   accessToken: "",
   refreshToken: "",
+  nickname: "",
+  name: "",
   isAuth: false,
 };
 
@@ -33,10 +37,17 @@ export const userSlice = createSlice({
     clearUser: (state) => {
       state.user = initUser;
     },
+    setUserAccessToken: (state, action: PayloadAction<string>) => {
+      state.user.accessToken = action.payload;
+    },
+    setUserAuth: (state, action: PayloadAction<boolean>) => {
+      state.user.isAuth = action.payload;
+    },
   },
 });
 
-export const { setUser, clearUser } = userSlice.actions;
+export const { setUser, clearUser, setUserAccessToken, setUserAuth } =
+  userSlice.actions;
 
 export const selectUser = (state: RootState) => state.user.user;
 

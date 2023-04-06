@@ -52,6 +52,8 @@ const LoginForm: FC<ILoginFormProps> = ({ className }) => {
               accessToken: response.data.data.access_token,
               refreshToken: response.data.data.refresh_token,
               isAuth: true,
+              name: response.data.data.first_name,
+              nickname: response.data.data.nickname,
             })
           );
           setIsLoading(false);
@@ -64,6 +66,10 @@ const LoginForm: FC<ILoginFormProps> = ({ className }) => {
           setIsLoading(false);
         }
         if (error.response.status === 401) {
+          setSubmitError(error.response.data.errors[0].message);
+          setIsLoading(false);
+        }
+        if (error) {
           setSubmitError(error.response.data.errors[0].message);
           setIsLoading(false);
         }

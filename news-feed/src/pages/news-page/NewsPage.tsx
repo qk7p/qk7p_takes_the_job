@@ -7,7 +7,7 @@ import NewsDesktopLayout from "./news-desktop-layout/NewsDesktopLayout";
 import Tab, { TabItem } from "@/ui/tab/Tab";
 import News from "@/components/news/News";
 import Sources from "@/components/sources/Sources";
-import Profile from "@/components/profile/Profile";
+import ProfilePage from "../profile-page/ProfilePage";
 
 const mobileItems: TabItem[] = [
   {
@@ -23,7 +23,7 @@ const mobileItems: TabItem[] = [
   },
   {
     icon: "Profile",
-    element: <Profile />,
+    element: <ProfilePage />,
     label: "Профиль",
   },
 ];
