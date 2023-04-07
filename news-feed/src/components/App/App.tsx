@@ -10,6 +10,8 @@ import RegistrationPage from "@/pages/registration-page/RegistrationPage";
 import RegistrationSuccess from "@/pages/registration-page/registration-success/RegistrationSuccess";
 import Profile from "../profile/Profile";
 import Sources from "../sources/Sources";
+import ProfilePage from "@/pages/profile-page/ProfilePage";
+import SourcesPage from "@/pages/sources-page/SourcesPage";
 
 const App: FC = () => {
   return (
@@ -17,6 +19,14 @@ const App: FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<RequireAuth outlet={<NewsPage />} />} />
+          <Route
+            path="/profile"
+            element={<RequireAuth outlet={<ProfilePage />} />}
+          />
+          <Route
+            path="/sources"
+            element={<RequireAuth outlet={<SourcesPage />} />}
+          />
 
           <Route path="/registration" element={<RegistrationPage />} />
           <Route
