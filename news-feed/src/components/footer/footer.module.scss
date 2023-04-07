@@ -1,6 +1,30 @@
+@import "@styles/index";
 
 .footer {
   width: 100%;
   height: 40px;
-  background-color: var(--color-footer-background);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: $ui-step * 2 $ui-step * 5;
+
+  background-color: $color-footer-background;
+
+  @include text-14-medium;
+  color: $color-text-white;
+}
+
+.name {
+  margin-right: auto;
+}
+
+.link {
+  margin-left: $ui-step * 3;
+  cursor: pointer;
+  &:hover {
+    color: $color-text-secondary;
+  }
 }
