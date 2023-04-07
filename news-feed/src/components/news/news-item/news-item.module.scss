@@ -1,0 +1,14 @@
+@import "@styles/index";
+
+.newsItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-top: $ui-step * 10;
+
+  @include default-block;
+
+  background-color: $color-news-item-background;
+}
