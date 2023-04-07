@@ -1,0 +1,15 @@
+@import "@styles/index";
+
+.headerMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .link {
+    @include text-18-medium;
+
+    color: $color-text-white;
+
+    margin-left: $ui-step * 4;
+  }
+}
