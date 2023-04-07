@@ -3,37 +3,18 @@ import styles from "./news-page.module.scss";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { MOBILE_SCREEN } from "@/constants/constants";
 import NewsMobileLayout from "./news-mobile-layout/NewsMobileLayout";
-import NewsDesktopLayout from "./news-desktop-layout/NewsDesktopLayout";
 import Tab, { TabItem } from "@/ui/tab/Tab";
 import News from "@/components/news/News";
 import Sources from "@/components/sources/Sources";
 import ProfilePage from "../profile-page/ProfilePage";
-
-const mobileItems: TabItem[] = [
-  {
-    icon: "News",
-    element: <News />,
-    isActive: true,
-    label: "Новости",
-  },
-  {
-    icon: "Sources",
-    element: <Sources />,
-    label: "Источники",
-  },
-  {
-    icon: "Profile",
-    element: <ProfilePage />,
-    label: "Профиль",
-  },
-];
+import NewsDesktopLayout from "./news-desktop-layout/NewsDesktopLayout";
 
 const NewsPage: FC = () => {
   const matches = useMediaQuery(MOBILE_SCREEN);
 
   return (
     <div className={styles.newsPage}>
-      {matches ? <Tab items={mobileItems} /> : <NewsDesktopLayout />}
+      {matches ? <NewsMobileLayout /> : <NewsDesktopLayout />}
     </div>
   );
 };

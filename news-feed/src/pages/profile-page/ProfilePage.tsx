@@ -9,7 +9,7 @@ export interface IProfilePage {
 
 const ProfilePage: FC<IProfilePage> = ({ className }) => {
   return (
-    <div className={classNames(styles.container, className)}>
+    <div className={classNames(styles.profilePage, className)}>
       <h1 className={styles.title}>Профиль</h1>
       <Profile />
     </div>

@@ -46,7 +46,7 @@ const ProfileItem: FC<IProfileItemProps> = ({
 
   return (
     <div
-      className={classNames(styles.container, className)}
+      className={classNames(styles.profileItem, className)}
       onClick={handleEdit}
     >
       <span className={styles.label}>{label + ": "}</span>

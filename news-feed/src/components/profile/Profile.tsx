@@ -6,8 +6,13 @@ import Button from "@/ui/button/Button";
 import { editMe, getMe, logout } from "@/api/userApi";
 import Loading from "../loading/Loading";
 import ProfileItem from "./profile-item/ProfileItem";
+import classNames from "classnames";
 
-const Profile: FC = () => {
+export interface IProfileProps {
+  className?: string;
+}
+
+const Profile: FC<IProfileProps> = ({ className }) => {
   const user = useAppSelector(selectUser);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -20,7 +25,6 @@ const Profile: FC = () => {
     setIsLoading(true);
     getMe()
       .then((response) => {
-        console.log(response);
         dispatch(
           setUser({
             ...user,
@@ -86,7 +90,7 @@ const Profile: FC = () => {
   };
 
   return (
-    <div className={styles.profile}>
+    <div className={classNames(styles.profile, className)}>
       <ProfileItem label={"Почта"} value={user.email} />
       <ProfileItem
         label={"Ник"}
