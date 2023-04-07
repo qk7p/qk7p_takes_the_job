@@ -5,6 +5,7 @@ import {
   setUser,
   setUserAccessToken,
   setUserAuth,
+  setUserRefreshToken,
 } from "@/store/slices/userSlice";
 import store from "@/store/store";
 import {
@@ -90,10 +91,11 @@ function createAxiosResponseInterceptor() {
           refresh_token: store.getState().user.user.refreshToken,
         })
         .then((response) => {
-          console.log(response);
-          store.dispatch(setUserAccessToken(response.data.access_token));
+          console.log("trying to refresh", response);
+          store.dispatch(setUserAccessToken(response.data.data.access_token));
+          store.dispatch(setUserRefreshToken(response.data.data.refresh_token));
           error.response.config.headers["Authorization"] =
-            "Bearer " + response.data.access_token;
+            "Bearer " + response.data.data.access_token;
 
           return axios(error.response.config);
         })
