@@ -14,7 +14,7 @@ function getIcon(type: IconType): JSX.Element {
 
 const Icon: FC<IIconProps> = ({ type, className }) => {
   return (
-    <div className={classNames(styles.container, className)}>
+    <div className={classNames(styles.icon, className)}>
       {getIcon(type)}
     </div>
   );
