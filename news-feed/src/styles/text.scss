@@ -32,6 +32,22 @@ $base-font-family: "Inter", sans-serif;
   line-height: 1.25;
 }
 
+@mixin text-16-medium {
+  font-family: $base-font-family;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.25;
+}
+
+@mixin text-18-medium {
+  font-family: $base-font-family;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.25;
+}
+
 @mixin text-20-medium {
   font-family: $base-font-family;
   font-size: 20px;

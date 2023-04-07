@@ -9,3 +9,16 @@ $ui-border-mobile: 1px solid $color-border;
 $ui-border-desktop: 1px solid $color-border;
 
 $ui-border-button: 1px solid $color-border;
+
+$ui-container-shadow: -15px 15px 15px 0px rgba(34, 60, 80, 0.3);
+
+@mixin default-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: $ui-step * 5;
+
+  box-shadow: $ui-container-shadow;
+}

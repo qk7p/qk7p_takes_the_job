@@ -1,12 +1,17 @@
 /* Global */
 /* Text */
-$color-text-primary: gray;
+$color-text-primary: #555756;
 $color-text-secondary: gray;
+
+$color-text-white: #fff;
+
 $color-text-error: red;
 $color-text-link: gray;
 
 $color-border: gray;
 $color-loading-spinner: black;
+
+$color-default-block-background: white;
 
 /* Button */
 $color-button-backgorund: gray;
@@ -14,37 +19,48 @@ $color-button-backgorund-hover: darkgray;
 $color-button-text: #fff;
 
 /* App */
-$color-app-background: #111;
+$color-app-background: #c3d0c9;
 
 /* Header */
-$color-header-background: green;
+$color-header-background: #4e6e65;
 
 /* Footer */
-$color-footer-background: green;
+$color-footer-background: #4e6e65;
 
 /* Login Page */
-$color-login-page-background: #fff;
+$color-login-page-background: transparent;
 $color-label-login: gray;
 
 /* Registration Page */
 $color-registration-page-background: #fff;
 
 /* News Page */
-$color-background-news-page: #fff;
+$color-news-page-background: transparent;
+
+/* News */
+$color-news-background: transparent;
+
+/* News Item */
+$color-news-item-background: #fff;
 
 /* Content */
 $color-content-background: white;
 $color-content-border: gray;
 
 /* Profile */
-$color-background-profile: white;
+$color-profile-background: #f0e0d0;
+
+/* Sources */
+$color-sources-background: #d8d8ce;
 
 /* Tab */
-$color-background-tab-item: #fff;
-$color-background-tab-item-active: red;
+$color-background-tab-item: #4e6e65;
+$color-background-tab-item-active: #c3d0c9;
 
 $color-tab-label: black;
 $color-tab-label-active: white;
 
 $color-tab-icon: black;
 $color-tab-icon-active: white;
+
+$color-tab-background: #4e6e65;
