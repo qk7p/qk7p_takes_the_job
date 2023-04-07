@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-color: inherit;
 }
 
 .form {
@@ -15,6 +17,8 @@
   justify-content: flex-start;
 
   padding: $ui-step * 2;
+
+  background-color: inherit;
 }
 
 .button {

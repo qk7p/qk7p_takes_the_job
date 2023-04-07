@@ -11,7 +11,7 @@
 
   padding: $ui-step * 3;
 
-  background-color: $color-background-profile;
+  background-color: $color-profile-background;
 
   @include text-14-regular;
   color: $color-text-primary;
@@ -29,9 +29,13 @@
 
   align-self: center;
   margin-top: auto;
-  
+
   &:hover {
     background-color: $color-button-backgorund-hover;
+  }
+
+  @media (min-width: $screen-tab) and (max-width: $screen-desktop) {
+    margin-top: $ui-step * 4;
   }
 }
 
