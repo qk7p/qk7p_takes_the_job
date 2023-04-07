@@ -40,14 +40,22 @@ export const userSlice = createSlice({
     setUserAccessToken: (state, action: PayloadAction<string>) => {
       state.user.accessToken = action.payload;
     },
+    setUserRefreshToken: (state, action: PayloadAction<string>) => {
+      state.user.refreshToken = action.payload;
+    },
     setUserAuth: (state, action: PayloadAction<boolean>) => {
       state.user.isAuth = action.payload;
     },
   },
 });
 
-export const { setUser, clearUser, setUserAccessToken, setUserAuth } =
-  userSlice.actions;
+export const {
+  setUser,
+  clearUser,
+  setUserAccessToken,
+  setUserAuth,
+  setUserRefreshToken,
+} = userSlice.actions;
 
 export const selectUser = (state: RootState) => state.user.user;
 
