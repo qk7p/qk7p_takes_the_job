@@ -11,6 +11,8 @@
   position: relative;
 
   margin-top: $ui-step * 2;
+
+  background-color: inherit;
 }
 
 .error {
@@ -38,7 +40,7 @@
   .label {
     top: 1px;
 
-    background-color: white;
+    background-color: inherit;
 
     @include text-12-regular;
   }
