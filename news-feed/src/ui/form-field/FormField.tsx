@@ -57,9 +57,18 @@ export const FormField = <T extends FieldValues>({
     }
   };
 
+  const onAnimationStart = (event: React.AnimationEvent<HTMLInputElement>) => {
+    const animated = event.animationName !== "";
+    setIsFocused(animated);
+  };
+
   return (
     <div
-      className={classNames(styles.formField, { [styles.focused]: isFocused })}
+      className={classNames(
+        styles.formField,
+        { [styles.focused]: isFocused },
+        className
+      )}
     >
       <label className={classNames(styles.label)}>{label}</label>
       <Input
@@ -71,6 +80,7 @@ export const FormField = <T extends FieldValues>({
         type={type}
         onFocus={onFocusCallback}
         onBlur={onBlurCallback}
+        onAnimationStart={onAnimationStart}
       />
       {error && <div className={styles.error}>{error}</div>}
     </div>
