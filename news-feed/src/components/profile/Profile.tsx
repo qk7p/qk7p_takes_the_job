@@ -3,10 +3,11 @@ import styles from "./profile.module.scss";
 import { useAppDispatch, useAppSelector } from "@/hooks/reduxHooks";
 import { clearUser, selectUser, setUser } from "@/store/slices/userSlice";
 import Button from "@/ui/button/Button";
-import { editMe, getMe, logout } from "@/api/userApi";
+import { editUser, getUser, logout } from "@/api/userApi";
 import Loading from "../loading/Loading";
 import ProfileItem from "./profile-item/ProfileItem";
 import classNames from "classnames";
+import store from "@/store/store";
 
 export interface IProfileProps {
   className?: string;
@@ -23,11 +24,14 @@ const Profile: FC<IProfileProps> = ({ className }) => {
 
   useEffect(() => {
     setIsLoading(true);
-    getMe()
+    getUser()
       .then((response) => {
+        // Костыль, исправить
+        const _user = store.getState().user.user;
+
         dispatch(
           setUser({
-            ...user,
+            ..._user,
             name: response.data.data.first_name,
             nickname: response.data.data.nickname,
           })
@@ -35,7 +39,6 @@ const Profile: FC<IProfileProps> = ({ className }) => {
         setIsLoading(false);
       })
       .catch((error) => {
-        console.log(error);
         setIsLoading(false);
       });
   }, []);
@@ -43,7 +46,7 @@ const Profile: FC<IProfileProps> = ({ className }) => {
   const handleLogOut = () => {
     setIsLoading(true);
     setLogoutError("");
-    logout(user.refreshToken)
+    logout()
       .then((response) => {
         if (response.status === 204) {
           dispatch(clearUser());
@@ -62,7 +65,7 @@ const Profile: FC<IProfileProps> = ({ className }) => {
     setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
   ) => {
     setIsLoading(true);
-    editMe("nickname", newValue, user.accessToken)
+    editUser("nickname", newValue)
       .then((response) => {
         dispatch(setUser({ ...user, nickname: response.data.data.nickname }));
         setIsLoading(false);
@@ -78,7 +81,7 @@ const Profile: FC<IProfileProps> = ({ className }) => {
     setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
   ) => {
     setIsLoading(true);
-    editMe("first_name", newValue, user.accessToken)
+    editUser("first_name", newValue)
       .then((response) => {
         dispatch(setUser({ ...user, name: response.data.data.first_name }));
         setIsLoading(false);

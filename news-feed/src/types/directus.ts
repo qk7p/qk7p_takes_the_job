@@ -24,3 +24,18 @@ export type RegisterResponse = {
   };
   error: string;
 };
+
+export type RefreshResponse = {
+  access_token: string;
+  refresh_token: string;
+  error: string;
+};
+
+export type DirectusRefreshResponse = {
+  status: number;
+  data: {
+    access_token: string;
+    refresh_token: string;
+  };
+  error: string;
+};
