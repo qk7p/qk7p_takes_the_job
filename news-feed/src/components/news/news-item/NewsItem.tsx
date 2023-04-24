@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import styles from "./news-item.module.scss";
 import classNames from "classnames";
 
@@ -17,8 +17,12 @@ export interface INewsItemProps {
 const NewsItem: FC<INewsItemProps> = ({ className, title, url }) => {
   return (
     <div className={classNames(styles.newsItem, className)}>
-      <h3>{title}</h3>
-      <img src={url} />
+      <div className={styles.title}>
+        <h3 className={styles.title}>{title}</h3>
+      </div>
+      <div className={styles.content}>
+        <img src={url} />
+      </div>
     </div>
   );
 };

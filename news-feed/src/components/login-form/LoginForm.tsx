@@ -85,6 +85,8 @@ const LoginForm: FC<ILoginFormProps> = ({ className }) => {
           name={"email"}
           label={"Почта"}
           error={errors.email?.message}
+          className={styles.formField}
+          autoComplete={"off"}
         />
         <FormField
           type={"password"}
@@ -92,6 +94,8 @@ const LoginForm: FC<ILoginFormProps> = ({ className }) => {
           name={"password"}
           label={"Пароль"}
           error={errors.password?.message}
+          className={styles.formField}
+          autoComplete={"off"}
         />
         <Button className={styles.button} type={"submit"}>
           {isLoading ? (

@@ -21,6 +21,12 @@
   background-color: inherit;
 }
 
+.formField {
+  label {
+    color: $color-label-login;
+  }
+}
+
 .button {
   min-width: 100px;
 

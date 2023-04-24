@@ -18,6 +18,9 @@ $color-button-backgorund: gray;
 $color-button-backgorund-hover: darkgray;
 $color-button-text: #fff;
 
+/* Form Field */
+$color-label: gray;
+
 /* App */
 $color-app-background: #c3d0c9;
 
@@ -28,7 +31,7 @@ $color-header-background: #4e6e65;
 $color-footer-background: #4e6e65;
 
 /* Login Page */
-$color-login-page-background: transparent;
+$color-login-page-background: #c3d0c9;
 $color-label-login: gray;
 
 /* Registration Page */
@@ -42,6 +45,8 @@ $color-news-background: transparent;
 
 /* News Item */
 $color-news-item-background: #fff;
+$color-news-item-title-background: #4e6e65;
+$color-news-item-title: white;
 
 /* Content */
 $color-content-background: white;
@@ -50,8 +55,14 @@ $color-content-border: gray;
 /* Profile */
 $color-profile-background: #f0e0d0;
 
+/* Profile Page */
+$color-profile-page-background: #f0e0d0;
+
 /* Sources */
 $color-sources-background: #d8d8ce;
+
+/* Sources Page */
+$color-sources-page-background: #d8d8ce;
 
 /* Tab */
 $color-background-tab-item: #4e6e65;

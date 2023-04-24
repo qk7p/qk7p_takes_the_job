@@ -9,6 +9,28 @@
   margin-top: $ui-step * 10;
 
   @include default-block;
-
+  padding: 0;
   background-color: $color-news-item-background;
+
+  .title {
+    width: 100%;
+
+    padding: $ui-step;
+
+    background-color: $color-news-item-title-background;
+    color: $color-news-item-title;
+
+    @include text-14-medium;
+  }
+
+  .content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: $ui-step * 2;
+  }
 }

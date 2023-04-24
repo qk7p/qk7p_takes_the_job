@@ -1,8 +1,8 @@
-import { FC, useEffect, useState } from "react";
+import { FC, memo, useEffect, useState } from "react";
 import styles from "./news.module.scss";
 import classNames from "classnames";
-import NewsItem, { NewsItemType } from "./news-item/NewsItem";
 import axios from "axios";
+import NewsItem, { NewsItemType } from "./news-item/NewsItem";
 
 export interface INewsProps {
   className?: string;
@@ -30,8 +30,6 @@ const News: FC<INewsProps> = ({ className }) => {
       thumbnailUrl: string;
     };
     if (fetching) {
-      console.log("fetching");
-
       axios
         .get<PhotosResponse[]>(
           `https://jsonplaceholder.typicode.com/photos?_limit=10&_page=${currentPage}`
@@ -54,8 +52,6 @@ const News: FC<INewsProps> = ({ className }) => {
         });
     }
   }, [fetching]);
-
-  useEffect(() => {}, []);
 
   return (
     <div className={classNames(styles.news, className)} onScroll={handleScroll}>

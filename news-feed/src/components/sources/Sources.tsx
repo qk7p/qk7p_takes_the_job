@@ -7,11 +7,7 @@ export interface ISourcesProps {
 }
 
 const Sources: FC<ISourcesProps> = ({ className }) => {
-  return (
-    <div className={classNames(styles.sources, className)}>
-      <h1>Источники</h1>
-    </div>
-  );
+  return <div className={classNames(styles.sources, className)}></div>;
 };
 
 export default Sources;
