@@ -5,6 +5,7 @@ import { ReactComponent as Profile } from "@assets/icons/Profile.svg";
 import { ReactComponent as Sources } from "@assets/icons/Sources.svg";
 import { ReactComponent as Edit } from "@assets/icons/Edit.svg";
 import { ReactComponent as Logo } from "@assets/icons/Logo.svg";
+import { ReactComponent as Plus } from "@assets/icons/Plus.svg";
 
 export type IconType =
   | "Loading"
@@ -12,6 +13,7 @@ export type IconType =
   | "Sources"
   | "News"
   | "Edit"
+  | "Plus"
   | "Logo";
 
 export const iconTypes = new Map([
@@ -21,4 +23,5 @@ export const iconTypes = new Map([
   ["Sources", <Sources key={newGuid()} />],
   ["Edit", <Edit key={newGuid()} />],
   ["Logo", <Logo key={newGuid()} />],
+  ["Plus", <Plus key={newGuid()} />],
 ]);

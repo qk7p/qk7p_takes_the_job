@@ -8,6 +8,7 @@ import Loading from "../loading/Loading";
 import ProfileItem from "./profile-item/ProfileItem";
 import classNames from "classnames";
 import store from "@/store/store";
+import UserAvatar from "@/ui/avatar/UserAvatar";
 
 export interface IProfileProps {
   className?: string;
@@ -92,8 +93,18 @@ const Profile: FC<IProfileProps> = ({ className }) => {
       });
   };
 
+  const handleAvatarClick = () => {
+    
+  };
+
   return (
     <div className={classNames(styles.profile, className)}>
+      <UserAvatar
+        name={user.name}
+        round={true}
+        size={"60"}
+        onClick={handleAvatarClick}
+      />
       <ProfileItem label={"Почта"} value={user.email} />
       <ProfileItem
         label={"Ник"}
