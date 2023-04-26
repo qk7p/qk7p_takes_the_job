@@ -4,16 +4,13 @@
   position: relative;
   padding: $ui-step;
   width: 80px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
   border-radius: 100%;
   overflow-y: hidden;
 
   .avatarIcon {
     position: absolute;
     z-index: 101;
-    bottom: -18px;
+    bottom: 3px;
     right: 14px;
     width: 24px;
     cursor: pointer;
@@ -28,4 +25,8 @@
 }
 
 .avatar {
+}
+
+.input {
+  display: none;
 }

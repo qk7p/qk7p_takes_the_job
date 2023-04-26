@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { ChangeEvent, FC, useRef, useState } from "react";
 import classNames from "classnames";
 import Avatar from "react-avatar";
 import styles from "./user-avatar.module.scss";
@@ -27,13 +27,26 @@ const UserAvatar: FC<IAvatarProps> = ({
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
-  const handleClick = () => {};
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const handleClick = () => {
+    if (!inputRef) return;
+    inputRef.current?.click();
+    console.log("click");
+  };
 
   const handleHoverIn = () => {
     setIsHovered(true);
   };
   const handleHoverOut = () => {
     setIsHovered(false);
+  };
+
+  const handleAvatarUpload = (event: ChangeEvent<HTMLInputElement>) => {
+    if (!inputRef) return;
+    if (event.target.files) {
+      setSelectedFile(event.target.files[0]);
+    }
   };
 
   return (
@@ -46,11 +59,23 @@ const UserAvatar: FC<IAvatarProps> = ({
         name={name}
         size={size}
         round={round}
-        onClick={handleClick}
         src={src}
         className={classNames(styles.avatar, className)}
       />
-      {isHovered && <IconButton type={"Plus"} className={styles.avatarIcon} />}
+      <input
+        type={"file"}
+        className={styles.input}
+        ref={inputRef}
+        accept={"image/*"}
+        onChange={handleAvatarUpload}
+      />
+      {isHovered && (
+        <IconButton
+          type={"Plus"}
+          className={styles.avatarIcon}
+          onClick={handleClick}
+        />
+      )}
     </div>
   );
 };
